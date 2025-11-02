@@ -1,8 +1,0 @@
-                                 FINAL REPORT
- HISTORY:  Checks ET tube placement.
- 
- COMPARISON:  ___ at ___.
- 
- FINDINGS:
- 
- The appearance of the lines and tubes are unchanged.
