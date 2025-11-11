@@ -26,7 +26,7 @@ def load_image(path: str) -> Image.Image:
     p = path.lower()
     if p.endswith((".jpg")):
         return Image.open(path).convert("RGB")
-    if p.endswith((".dcm",)):
+    if p.endswith((".dcm",)): # we use this 
         return load_dicom(path)
     raise ValueError(f"Unsupported format: {path}")
 
@@ -61,6 +61,10 @@ class MIMICImpressionDataset:
     """
 
     def __init__(self, csv_file: str, root: str):
+        '''
+        csv_file: path to the CSV file with 'image_paths' and 'impression' columns
+        root: root directory for image paths (DICOM)
+        '''
         self.df = pd.read_csv(csv_file)
         self.root = Path(root)
 
